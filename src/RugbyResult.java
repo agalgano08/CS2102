@@ -16,14 +16,13 @@ public class RugbyResult implements IResult {
 	public boolean isValid(){
 		return (this.team1points < 150 && this.team2points < 150);
 	}
+
 	
-	
-	// this only works if you assume no ties which we do
 	public IContestant getWinner() {
 		if(this.team1points > this.team2points) {
 			return this.team1;
 		}
-		else {
+		else  {
 			return this.team2;
 		}	
 	}
